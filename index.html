@@ -71,6 +71,596 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Go vs Ruby vs Python 三大语言对比" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/04/03/Go%20vs%20Ruby%20vs%20Python%20%E4%B8%89%E5%A4%A7%E8%AF%AD%E8%A8%80%E5%AF%B9%E6%AF%94/" class="article-date">
+  <time class="dt-published" datetime="2026-04-03T08:15:00.000Z" itemprop="datePublished">2026-04-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AF%B9%E6%AF%94/">技术对比</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/04/03/Go%20vs%20Ruby%20vs%20Python%20%E4%B8%89%E5%A4%A7%E8%AF%AD%E8%A8%80%E5%AF%B9%E6%AF%94/">Go vs Ruby vs Python 三大语言对比</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Go-vs-Ruby-vs-Python-三大语言对比"><a href="#Go-vs-Ruby-vs-Python-三大语言对比" class="headerlink" title="Go vs Ruby vs Python 三大语言对比"></a>Go vs Ruby vs Python 三大语言对比</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Go、Ruby和Python是三种风格迥异的编程语言，各有其优势和适用场景。本文将从多个维度对它们进行对比，帮助你选择最适合项目的语言。</p>
+<h2 id="语言特性对比"><a href="#语言特性对比" class="headerlink" title="语言特性对比"></a>语言特性对比</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Go</th>
+<th>Ruby</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类型系统</td>
+<td>静态强类型</td>
+<td>动态强类型</td>
+<td>动态强类型</td>
+</tr>
+<tr>
+<td>编译方式</td>
+<td>编译型</td>
+<td>解释型</td>
+<td>解释型</td>
+</tr>
+<tr>
+<td>并发模型</td>
+<td>Goroutine&#x2F;Channel</td>
+<td>线程&#x2F;纤程</td>
+<td>线程&#x2F;异步</td>
+</tr>
+<tr>
+<td>执行速度</td>
+<td>快</td>
+<td>慢</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>学习曲线</td>
+<td>平缓</td>
+<td>中等</td>
+<td>平缓</td>
+</tr>
+<tr>
+<td>代码风格</td>
+<td>严格统一</td>
+<td>灵活自由</td>
+<td>缩进严格</td>
+</tr>
+</tbody></table>
+<h2 id="语法对比"><a href="#语法对比" class="headerlink" title="语法对比"></a>语法对比</h2><h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p><strong>Go</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Ruby</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">puts <span class="string">&quot;Hello, World!&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Python</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><p><strong>Go</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">add</span><span class="params">(a <span class="type">int</span>, b <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Ruby</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>)</span><br><span class="line">  a + b</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Python</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br></pre></td></tr></table></figure>
+
+<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><p><strong>Go</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">    Name <span class="type">string</span></span><br><span class="line">    Age  <span class="type">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p Person)</span></span> Introduce() <span class="type">string</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> fmt.Sprintf(<span class="string">&quot;我是%s，今年%d岁&quot;</span>, p.Name, p.Age)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Ruby</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span></span><br><span class="line">  <span class="built_in">attr_accessor</span> <span class="symbol">:name</span>, <span class="symbol">:age</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">initialize</span>(<span class="params">name, age</span>)</span><br><span class="line">    <span class="variable">@name</span> = name</span><br><span class="line">    <span class="variable">@age</span> = age</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">introduce</span></span><br><span class="line">    <span class="string">&quot;我是<span class="subst">#&#123;<span class="variable">@name</span>&#125;</span>，今年<span class="subst">#&#123;<span class="variable">@age</span>&#125;</span>岁&quot;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Python</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.age = age</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">introduce</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;我是<span class="subst">&#123;self.name&#125;</span>，今年<span class="subst">&#123;self.age&#125;</span>岁&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="并发编程"><a href="#并发编程" class="headerlink" title="并发编程"></a>并发编程</h3><p><strong>Go</strong> - 原生支持，简洁优雅</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">string</span>)</span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123; ch &lt;- <span class="string">&quot;完成&quot;</span> &#125;()</span><br><span class="line">    fmt.Println(&lt;-ch)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Ruby</strong> - 线程支持有限</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">threads = []</span><br><span class="line"><span class="number">3</span>.times <span class="keyword">do</span> |<span class="params">i</span>|</span><br><span class="line">  threads &lt;&lt; <span class="title class_">Thread</span>.new <span class="keyword">do</span></span><br><span class="line">    puts <span class="string">&quot;Thread <span class="subst">#&#123;i&#125;</span>&quot;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">threads.each(&amp;<span class="symbol">:join</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python</strong> - asyncio异步</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">worker</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;完成&quot;</span>)</span><br><span class="line"></span><br><span class="line">asyncio.run(worker())</span><br></pre></td></tr></table></figure>
+
+<h2 id="性能对比"><a href="#性能对比" class="headerlink" title="性能对比"></a>性能对比</h2><h3 id="执行速度"><a href="#执行速度" class="headerlink" title="执行速度"></a>执行速度</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Go &gt;&gt;&gt; Python &gt; Ruby</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Go</strong>：编译为机器码，执行速度最快，接近C&#x2F;C++</li>
+<li><strong>Python</strong>：解释执行，但有CPython优化和JIT（PyPy）</li>
+<li><strong>Ruby</strong>：解释执行，三者中最慢</li>
+</ul>
+<h3 id="内存使用"><a href="#内存使用" class="headerlink" title="内存使用"></a>内存使用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Go &lt; Python &lt; Ruby</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Go</strong>：内存占用低，垃圾回收高效</li>
+<li><strong>Python</strong>：中等水平</li>
+<li><strong>Ruby</strong>：内存占用相对较高</li>
+</ul>
+<h2 id="生态系统对比"><a href="#生态系统对比" class="headerlink" title="生态系统对比"></a>生态系统对比</h2><h3 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>主流框架</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Go</td>
+<td>Gin, Echo, Fiber</td>
+<td>高性能，适合API服务</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>Ruby on Rails</td>
+<td>开发效率高，约定优于配置</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>Django, Flask, FastAPI</td>
+<td>生态丰富，适合各种规模项目</td>
+</tr>
+</tbody></table>
+<h3 id="数据科学-AI"><a href="#数据科学-AI" class="headerlink" title="数据科学&#x2F;AI"></a>数据科学&#x2F;AI</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>支持程度</th>
+<th>主要库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Go</td>
+<td>一般</td>
+<td>gonum, golearn</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>较弱</td>
+<td>numo-narray</td>
+</tr>
+<tr>
+<td>Python</td>
+<td><strong>极强</strong></td>
+<td>NumPy, Pandas, TensorFlow, PyTorch</td>
+</tr>
+</tbody></table>
+<h3 id="自动化-脚本"><a href="#自动化-脚本" class="headerlink" title="自动化&#x2F;脚本"></a>自动化&#x2F;脚本</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>支持程度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Go</td>
+<td>一般</td>
+<td>适合编写CLI工具</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>强</td>
+<td>DevOps工具链丰富</td>
+</tr>
+<tr>
+<td>Python</td>
+<td><strong>极强</strong></td>
+<td>自动化领域首选</td>
+</tr>
+</tbody></table>
+<h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><h3 id="选择Go的场景"><a href="#选择Go的场景" class="headerlink" title="选择Go的场景"></a>选择Go的场景</h3><ul>
+<li>高并发网络服务（微服务、API网关）</li>
+<li>云原生应用（Docker、Kubernetes生态）</li>
+<li>需要高性能的系统级编程</li>
+<li>分布式系统</li>
+<li>CLI工具开发</li>
+</ul>
+<h3 id="选择Ruby的场景"><a href="#选择Ruby的场景" class="headerlink" title="选择Ruby的场景"></a>选择Ruby的场景</h3><ul>
+<li>快速原型开发</li>
+<li>中小型Web应用（Rails）</li>
+<li>需要快速迭代的创业项目</li>
+<li>DevOps自动化（Chef、Puppet）</li>
+<li>脚本任务</li>
+</ul>
+<h3 id="选择Python的场景"><a href="#选择Python的场景" class="headerlink" title="选择Python的场景"></a>选择Python的场景</h3><ul>
+<li>数据分析和可视化</li>
+<li>机器学习和人工智能</li>
+<li>Web开发（全栈）</li>
+<li>自动化测试和运维</li>
+<li>科学计算</li>
+<li>快速原型开发</li>
+</ul>
+<h2 id="开发效率对比"><a href="#开发效率对比" class="headerlink" title="开发效率对比"></a>开发效率对比</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ruby ≈ Python &gt; Go</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Ruby</strong>：语法最灵活，代码量最少，Rails框架开发效率极高</li>
+<li><strong>Python</strong>：语法简洁，库丰富，开发效率高</li>
+<li><strong>Go</strong>：语法严格但简单，需要写更多代码，但代码可读性强</li>
+</ul>
+<h2 id="就业市场"><a href="#就业市场" class="headerlink" title="就业市场"></a>就业市场</h2><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>需求领域</th>
+<th>薪资水平</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Go</td>
+<td>后端开发、云原生、区块链</td>
+<td>高</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>Web开发、初创公司</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>全领域（数据、AI、Web、自动化）</td>
+<td>高</td>
+</tr>
+</tbody></table>
+<h2 id="总结建议"><a href="#总结建议" class="headerlink" title="总结建议"></a>总结建议</h2><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Go</th>
+<th>Ruby</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>性能</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>开发效率</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>学习难度</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>生态丰富度</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>并发能力</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody></table>
+<p><strong>一句话总结：</strong></p>
+<ul>
+<li><strong>Go</strong>：追求性能和并发能力的后端首选</li>
+<li><strong>Ruby</strong>：追求开发效率和代码优雅的Web开发利器</li>
+<li><strong>Python</strong>：全能型选手，数据科学和AI领域无可替代</li>
+</ul>
+<p>选择哪种语言，取决于你的项目需求、团队技能和长期规划。对于现代开发者来说，了解这三种语言各自的优势，才能更好地做出技术选型。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://shuqwf.github.io/2026/04/03/Go%20vs%20Ruby%20vs%20Python%20%E4%B8%89%E5%A4%A7%E8%AF%AD%E8%A8%80%E5%AF%B9%E6%AF%94/" data-id="cuidcLes8VReoU_A1i7Hfedlm" data-title="Go vs Ruby vs Python 三大语言对比" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/" rel="tag">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%AF%B9%E6%AF%94/" rel="tag">编程语言对比</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Python入门" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/04/03/Python%E5%85%A5%E9%97%A8/" class="article-date">
+  <time class="dt-published" datetime="2026-04-03T08:10:00.000Z" itemprop="datePublished">2026-04-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/">编程教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/04/03/Python%E5%85%A5%E9%97%A8/">Python入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Python入门"><a href="#Python入门" class="headerlink" title="Python入门"></a>Python入门</h1><h2 id="什么是Python？"><a href="#什么是Python？" class="headerlink" title="什么是Python？"></a>什么是Python？</h2><p>Python是一种解释型、面向对象、动态数据类型的高级编程语言。由Guido van Rossum于1991年发布。Python的设计哲学强调代码的可读性和简洁的语法，是目前最受欢迎的编程语言之一。</p>
+<h2 id="为什么选择Python？"><a href="#为什么选择Python？" class="headerlink" title="为什么选择Python？"></a>为什么选择Python？</h2><ul>
+<li><strong>简单易学</strong>：语法接近伪代码，适合初学者</li>
+<li><strong>应用广泛</strong>：Web开发、数据科学、人工智能、自动化等</li>
+<li><strong>生态丰富</strong>：拥有庞大的第三方库和框架</li>
+<li><strong>跨平台</strong>：支持Windows、macOS、Linux等</li>
+<li><strong>社区强大</strong>：活跃的开发社区和丰富的学习资源</li>
+</ul>
+<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+<li>下载安装包并运行</li>
+<li><strong>重要</strong>：安装时勾选”Add Python to PATH”</li>
+</ol>
+<h3 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install python3</span><br></pre></td></tr></table></figure>
+
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install python3 python3-pip</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 --version</span><br><span class="line">pip3 --version</span><br></pre></td></tr></table></figure>
+
+<h2 id="第一个Python程序"><a href="#第一个Python程序" class="headerlink" title="第一个Python程序"></a>第一个Python程序</h2><p>创建文件 <code>hello.py</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行程序：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 hello.py</span><br></pre></td></tr></table></figure>
+
+<h2 id="交互式Python"><a href="#交互式Python" class="headerlink" title="交互式Python"></a>交互式Python</h2><p>Python提供交互式环境，可以直接输入代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>)</span><br><span class="line">Hello</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span> + <span class="number">3</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>Python不需要声明变量类型，直接赋值即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;Python&quot;</span></span><br><span class="line">version = <span class="number">3.12</span></span><br><span class="line">is_awesome = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字符串</span></span><br><span class="line">str1 = <span class="string">&quot;Hello Python&quot;</span></span><br><span class="line">str2 = <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line">name = <span class="string">&quot;Python&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>!&quot;</span>)  <span class="comment"># f-string格式化</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数字</span></span><br><span class="line">num1 = <span class="number">42</span>         <span class="comment"># 整数</span></span><br><span class="line">num2 = <span class="number">3.14</span>       <span class="comment"># 浮点数</span></span><br><span class="line">num3 = <span class="number">2</span> + <span class="number">3j</span>     <span class="comment"># 复数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 布尔值</span></span><br><span class="line">is_true = <span class="literal">True</span></span><br><span class="line">is_false = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表（数组）</span></span><br><span class="line">fruits = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;orange&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 元组（不可变列表）</span></span><br><span class="line">colors = (<span class="string">&quot;red&quot;</span>, <span class="string">&quot;green&quot;</span>, <span class="string">&quot;blue&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字典（键值对）</span></span><br><span class="line">person = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小明&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span>, <span class="string">&quot;city&quot;</span>: <span class="string">&quot;上海&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 集合</span></span><br><span class="line">unique_nums = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;成年人&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt;= <span class="number">13</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;青少年&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;儿童&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 三元表达式</span></span><br><span class="line">status = <span class="string">&quot;成年&quot;</span> <span class="keyword">if</span> age &gt;= <span class="number">18</span> <span class="keyword">else</span> <span class="string">&quot;未成年&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 逻辑运算符</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span> <span class="keyword">and</span> age &lt; <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;劳动年龄&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &lt; <span class="number">18</span> <span class="keyword">or</span> age &gt; <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;非劳动年龄&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># for循环</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历列表</span></span><br><span class="line">fruits = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;orange&quot;</span>]</span><br><span class="line"><span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:</span><br><span class="line">    <span class="built_in">print</span>(fruit)</span><br><span class="line"></span><br><span class="line"><span class="comment"># while循环</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">5</span>:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 带enumerate的循环</span></span><br><span class="line"><span class="keyword">for</span> index, fruit <span class="keyword">in</span> <span class="built_in">enumerate</span>(fruits):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;index&#125;</span>: <span class="subst">&#123;fruit&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基本函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(greet(<span class="string">&quot;Python&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">introduce</span>(<span class="params">name, age=<span class="number">18</span></span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;我是<span class="subst">&#123;name&#125;</span>，今年<span class="subst">&#123;age&#125;</span>岁&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可变参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_all</span>(<span class="params">*numbers</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(sum_all(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))  <span class="comment"># 15</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 关键字参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_user</span>(<span class="params">**kwargs</span>):</span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;key&#125;</span>: <span class="subst">&#123;value&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">create_user(name=<span class="string">&quot;小明&quot;</span>, age=<span class="number">25</span>, city=<span class="string">&quot;上海&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Lambda函数</span></span><br><span class="line">square = <span class="keyword">lambda</span> x: x ** <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(square(<span class="number">5</span>))  <span class="comment"># 25</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 类属性</span></span><br><span class="line">    species = <span class="string">&quot;人类&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 构造函数</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.age = age</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 实例方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">introduce</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;我是<span class="subst">&#123;self.name&#125;</span>，今年<span class="subst">&#123;self.age&#125;</span>岁&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_species</span>(<span class="params">cls</span>):</span><br><span class="line">        <span class="keyword">return</span> cls.species</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">is_adult</span>(<span class="params">age</span>):</span><br><span class="line">        <span class="keyword">return</span> age &gt;= <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象</span></span><br><span class="line">p1 = Person(<span class="string">&quot;小明&quot;</span>, <span class="number">25</span>)</span><br><span class="line"><span class="built_in">print</span>(p1.introduce())</span><br><span class="line"><span class="built_in">print</span>(Person.get_species())</span><br><span class="line"><span class="built_in">print</span>(Person.is_adult(<span class="number">20</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 继承</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age, grade</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__(name, age)</span><br><span class="line">        <span class="variable language_">self</span>.grade = grade</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">introduce</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;我是<span class="subst">&#123;self.name&#125;</span>，<span class="subst">&#123;self.grade&#125;</span>年级学生&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="模块和包"><a href="#模块和包" class="headerlink" title="模块和包"></a>模块和包</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入整个模块</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.sqrt(<span class="number">16</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入特定函数</span></span><br><span class="line"><span class="keyword">from</span> os <span class="keyword">import</span> path</span><br><span class="line"><span class="built_in">print</span>(path.exists(<span class="string">&quot;hello.py&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入并重命名</span></span><br><span class="line"><span class="keyword">import</span> datetime <span class="keyword">as</span> dt</span><br><span class="line"><span class="built_in">print</span>(dt.datetime.now())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入所有（不推荐）</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
+
+<h2 id="pip包管理"><a href="#pip包管理" class="headerlink" title="pip包管理"></a>pip包管理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip3 install requests      <span class="comment"># 安装包</span></span><br><span class="line">pip3 list                  <span class="comment"># 列出已安装的包</span></span><br><span class="line">pip3 uninstall requests    <span class="comment"># 卸载包</span></span><br><span class="line">pip3 freeze &gt; requirements.txt  <span class="comment"># 导出依赖</span></span><br><span class="line">pip3 install -r requirements.txt  <span class="comment"># 安装依赖</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常用标准库"><a href="#常用标准库" class="headerlink" title="常用标准库"></a>常用标准库</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os          <span class="comment"># 操作系统接口</span></span><br><span class="line"><span class="keyword">import</span> sys         <span class="comment"># 系统相关</span></span><br><span class="line"><span class="keyword">import</span> json        <span class="comment"># JSON处理</span></span><br><span class="line"><span class="keyword">import</span> datetime    <span class="comment"># 日期时间</span></span><br><span class="line"><span class="keyword">import</span> re          <span class="comment"># 正则表达式</span></span><br><span class="line"><span class="keyword">import</span> random      <span class="comment"># 随机数</span></span><br><span class="line"><span class="keyword">import</span> collections <span class="comment"># 数据结构</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Python凭借其简洁的语法和强大的生态系统，已成为数据科学、人工智能、Web开发等领域的首选语言。无论是初学者还是专业开发者，Python都是值得掌握的技能。学习基础后，可以根据兴趣选择Django&#x2F;Flask（Web）、NumPy&#x2F;Pandas（数据分析）、TensorFlow&#x2F;PyTorch（机器学习）等方向深入学习。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://shuqwf.github.io/2026/04/03/Python%E5%85%A5%E9%97%A8/" data-id="cuidINxcwu6ACZ9peGSFa54Fp" data-title="Python入门" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" rel="tag">入门教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag">编程语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Ruby入门" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/04/03/Ruby%E5%85%A5%E9%97%A8/" class="article-date">
+  <time class="dt-published" datetime="2026-04-03T08:05:00.000Z" itemprop="datePublished">2026-04-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/">编程教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/04/03/Ruby%E5%85%A5%E9%97%A8/">Ruby入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Ruby入门"><a href="#Ruby入门" class="headerlink" title="Ruby入门"></a>Ruby入门</h1><h2 id="什么是Ruby？"><a href="#什么是Ruby？" class="headerlink" title="什么是Ruby？"></a>什么是Ruby？</h2><p>Ruby是一门开源的动态编程语言，注重简洁性和生产力。由日本程序员松本行弘（Yukihiro Matsumoto，昵称Matz）于1995年开发。Ruby的设计哲学是”让程序员快乐”，强调代码的可读性和优雅性。</p>
+<h2 id="为什么选择Ruby？"><a href="#为什么选择Ruby？" class="headerlink" title="为什么选择Ruby？"></a>为什么选择Ruby？</h2><ul>
+<li><strong>优雅简洁</strong>：代码接近自然语言，易于理解</li>
+<li><strong>面向对象</strong>：一切皆对象，包括基本数据类型</li>
+<li><strong>Rails框架</strong>：拥有强大的Web开发框架Ruby on Rails</li>
+<li><strong>社区活跃</strong>：丰富的gem（包）生态系统</li>
+<li><strong>开发效率高</strong>：用更少的代码完成更多工作</li>
+</ul>
+<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>使用RubyInstaller：</p>
+<ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://rubyinstaller.org/">https://rubyinstaller.org/</a></li>
+<li>下载安装包并运行</li>
+<li>安装时勾选”Add Ruby executables to your PATH”</li>
+</ol>
+<h3 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h3><p>macOS自带Ruby，但建议使用rbenv或RVM管理版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install rbenv</span><br><span class="line">rbenv install 3.2.2</span><br><span class="line">rbenv global 3.2.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install ruby-full</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby --version</span><br></pre></td></tr></table></figure>
+
+<h2 id="第一个Ruby程序"><a href="#第一个Ruby程序" class="headerlink" title="第一个Ruby程序"></a>第一个Ruby程序</h2><p>创建文件 <code>hello.rb</code>：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">puts <span class="string">&quot;Hello, World!&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行程序：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby hello.rb</span><br></pre></td></tr></table></figure>
+
+<h2 id="交互式Ruby（IRB）"><a href="#交互式Ruby（IRB）" class="headerlink" title="交互式Ruby（IRB）"></a>交互式Ruby（IRB）</h2><p>Ruby提供了交互式环境，可以直接输入代码查看结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irb</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">irb(main)<span class="symbol">:</span><span class="number">001</span>&gt; puts <span class="string">&quot;Hello&quot;</span></span><br><span class="line"><span class="title class_">Hello</span></span><br><span class="line">=&gt; nil</span><br></pre></td></tr></table></figure>
+
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 局部变量（小写字母或下划线开头）</span></span><br><span class="line">name = <span class="string">&quot;Ruby&quot;</span></span><br><span class="line">age = <span class="number">30</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例变量（@开头）</span></span><br><span class="line"><span class="variable">@title</span> = <span class="string">&quot;Ruby入门&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 类变量（@@开头）</span></span><br><span class="line"><span class="variable">@@count</span> = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 全局变量（$开头）</span></span><br><span class="line"><span class="variable">$version</span> = <span class="string">&quot;3.2&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常量（大写字母开头）</span></span><br><span class="line"><span class="variable constant_">PI</span> = <span class="number">3.14159</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字符串</span></span><br><span class="line">str1 = <span class="string">&quot;Hello Ruby&quot;</span></span><br><span class="line">str2 = <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line">name = <span class="string">&quot;Ruby&quot;</span></span><br><span class="line">puts <span class="string">&quot;Hello, <span class="subst">#&#123;name&#125;</span>!&quot;</span>  <span class="comment"># 字符串插值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数字</span></span><br><span class="line">num1 = <span class="number">42</span>        <span class="comment"># 整数</span></span><br><span class="line">num2 = <span class="number">3.14</span>      <span class="comment"># 浮点数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 布尔值</span></span><br><span class="line">is_true = <span class="literal">true</span></span><br><span class="line">is_false = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 符号</span></span><br><span class="line"><span class="symbol">:status</span></span><br><span class="line"><span class="symbol">:error</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数组</span></span><br><span class="line">fruits = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;orange&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 哈希</span></span><br><span class="line">person = &#123; <span class="symbol">name:</span> <span class="string">&quot;小明&quot;</span>, <span class="symbol">age:</span> <span class="number">25</span>, <span class="symbol">city:</span> <span class="string">&quot;上海&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span></span><br><span class="line">  puts <span class="string">&quot;成年人&quot;</span></span><br><span class="line"><span class="keyword">elsif</span> age &gt;= <span class="number">13</span></span><br><span class="line">  puts <span class="string">&quot;青少年&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  puts <span class="string">&quot;儿童&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># unless（if not的简写）</span></span><br><span class="line"><span class="keyword">unless</span> age &lt; <span class="number">18</span></span><br><span class="line">  puts <span class="string">&quot;可以投票&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 后置条件</span></span><br><span class="line">puts <span class="string">&quot;及格&quot;</span> <span class="keyword">if</span> score &gt;= <span class="number">60</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># case语句</span></span><br><span class="line">grade = <span class="string">&quot;A&quot;</span></span><br><span class="line"><span class="keyword">case</span> grade</span><br><span class="line"><span class="keyword">when</span> <span class="string">&quot;A&quot;</span> <span class="keyword">then</span> puts <span class="string">&quot;优秀&quot;</span></span><br><span class="line"><span class="keyword">when</span> <span class="string">&quot;B&quot;</span> <span class="keyword">then</span> puts <span class="string">&quot;良好&quot;</span></span><br><span class="line"><span class="keyword">when</span> <span class="string">&quot;C&quot;</span> <span class="keyword">then</span> puts <span class="string">&quot;及格&quot;</span></span><br><span class="line"><span class="keyword">else</span> puts <span class="string">&quot;不及格&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># while循环</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">5</span></span><br><span class="line">  puts i</span><br><span class="line">  i += <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># until循环</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">until</span> i &gt;= <span class="number">5</span></span><br><span class="line">  puts i</span><br><span class="line">  i += <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># for循环</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">4</span></span><br><span class="line">  puts i</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># each迭代（推荐）</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].each <span class="keyword">do</span> |<span class="params">num</span>|</span><br><span class="line">  puts num</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># times迭代</span></span><br><span class="line"><span class="number">5</span>.times <span class="keyword">do</span> |<span class="params">i</span>|</span><br><span class="line">  puts i</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 范围迭代</span></span><br><span class="line">(<span class="number">1</span>..<span class="number">5</span>).each &#123; |<span class="params">n</span>| puts n &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基本方法</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>)</span><br><span class="line">  <span class="string">&quot;Hello, <span class="subst">#&#123;name&#125;</span>!&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">puts greet(<span class="string">&quot;Ruby&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">introduce</span>(<span class="params">name, age = <span class="number">18</span></span>)</span><br><span class="line">  <span class="string">&quot;我是<span class="subst">#&#123;name&#125;</span>，今年<span class="subst">#&#123;age&#125;</span>岁&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可变参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum</span>(<span class="params">*numbers</span>)</span><br><span class="line">  numbers.reduce(<span class="number">0</span>, <span class="symbol">:+</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">puts sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)  <span class="comment"># 15</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回值</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">divide</span>(<span class="params">a, b</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">nil</span> <span class="keyword">if</span> b == <span class="number">0</span></span><br><span class="line">  a.to_f / b</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span></span><br><span class="line">  <span class="built_in">attr_accessor</span> <span class="symbol">:name</span>, <span class="symbol">:age</span>  <span class="comment"># 自动生成getter和setter</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># 类变量</span></span><br><span class="line">  <span class="variable">@@count</span> = <span class="number">0</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># 构造函数</span></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">initialize</span>(<span class="params">name, age</span>)</span><br><span class="line">    <span class="variable">@name</span> = name</span><br><span class="line">    <span class="variable">@age</span> = age</span><br><span class="line">    <span class="variable">@@count</span> += <span class="number">1</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># 实例方法</span></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">introduce</span></span><br><span class="line">    <span class="string">&quot;我是<span class="subst">#&#123;<span class="variable">@name</span>&#125;</span>，今年<span class="subst">#&#123;<span class="variable">@age</span>&#125;</span>岁&quot;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># 类方法</span></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">self</span>.count</span><br><span class="line">    <span class="variable">@@count</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象</span></span><br><span class="line">p1 = <span class="title class_">Person</span>.new(<span class="string">&quot;小明&quot;</span>, <span class="number">25</span>)</span><br><span class="line">puts p1.introduce</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问属性</span></span><br><span class="line">p1.name = <span class="string">&quot;小红&quot;</span></span><br><span class="line">puts p1.name</span><br><span class="line"></span><br><span class="line">puts <span class="title class_">Person</span>.count  <span class="comment"># 1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> <span class="title class_">Greetable</span></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">hello</span></span><br><span class="line">    <span class="string">&quot;Hello from module!&quot;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span></span><br><span class="line">  <span class="keyword">include</span> <span class="title class_">Greetable</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">p = <span class="title class_">Person</span>.new</span><br><span class="line">puts p.hello</span><br></pre></td></tr></table></figure>
+
+<h2 id="RubyGems包管理"><a href="#RubyGems包管理" class="headerlink" title="RubyGems包管理"></a>RubyGems包管理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gem install rails          <span class="comment"># 安装gem</span></span><br><span class="line">gem list                   <span class="comment"># 列出已安装的gem</span></span><br><span class="line">gem uninstall rails        <span class="comment"># 卸载gem</span></span><br><span class="line">gem update                 <span class="comment"># 更新所有gem</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Ruby以其优雅的语法和强大的Rails框架，在Web开发领域占据重要地位。其”程序员友好”的设计理念，使得代码编写过程更加愉悦。学习Ruby后，建议进一步学习Ruby on Rails框架，快速构建Web应用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://shuqwf.github.io/2026/04/03/Ruby%E5%85%A5%E9%97%A8/" data-id="cuidHcfD7zzTbnmP9AyAhhWC7" data-title="Ruby入门" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" rel="tag">入门教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag">编程语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Go语言入门" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/04/03/Go%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/" class="article-date">
+  <time class="dt-published" datetime="2026-04-03T08:00:00.000Z" itemprop="datePublished">2026-04-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/">编程教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/04/03/Go%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">Go语言入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Go语言入门"><a href="#Go语言入门" class="headerlink" title="Go语言入门"></a>Go语言入门</h1><h2 id="什么是Go语言？"><a href="#什么是Go语言？" class="headerlink" title="什么是Go语言？"></a>什么是Go语言？</h2><p>Go（又称Golang）是Google开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言。由Robert Griesemer、Rob Pike和Ken Thompson于2007年开始设计，2009年正式发布。</p>
+<h2 id="为什么选择Go？"><a href="#为什么选择Go？" class="headerlink" title="为什么选择Go？"></a>为什么选择Go？</h2><ul>
+<li><strong>简洁高效</strong>：语法简洁，学习曲线平缓</li>
+<li><strong>原生并发</strong>：goroutine和channel让并发编程变得简单</li>
+<li><strong>编译速度快</strong>：编译型语言，执行效率高</li>
+<li><strong>标准库丰富</strong>：内置大量实用库，开箱即用</li>
+<li><strong>跨平台编译</strong>：支持多种操作系统和架构</li>
+</ul>
+<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://go.dev/dl/">https://go.dev/dl/</a> 下载安装包</li>
+<li>运行安装程序，默认安装到 <code>C:\Go</code></li>
+<li>配置环境变量，将 <code>C:\Go\bin</code> 添加到PATH</li>
+</ol>
+<h3 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install go</span><br></pre></td></tr></table></figure>
+
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install golang</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go version</span><br></pre></td></tr></table></figure>
+
+<h2 id="第一个Go程序"><a href="#第一个Go程序" class="headerlink" title="第一个Go程序"></a>第一个Go程序</h2><p>创建文件 <code>hello.go</code>：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行程序：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go run hello.go</span><br></pre></td></tr></table></figure>
+
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方式一：完整声明</span></span><br><span class="line"><span class="keyword">var</span> name <span class="type">string</span> = <span class="string">&quot;Go&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式二：类型推断</span></span><br><span class="line"><span class="keyword">var</span> version = <span class="string">&quot;1.21&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式三：简短声明（只能在函数内使用）</span></span><br><span class="line">age := <span class="number">25</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> (</span><br><span class="line">    num     <span class="type">int</span>     = <span class="number">42</span></span><br><span class="line">    float   <span class="type">float64</span> = <span class="number">3.14</span></span><br><span class="line">    boolean <span class="type">bool</span>    = <span class="literal">true</span></span><br><span class="line">    str     <span class="type">string</span>  = <span class="string">&quot;Hello Go&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">age := <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;成年人&quot;</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;未成年人&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 带初始化的if</span></span><br><span class="line"><span class="keyword">if</span> score := <span class="number">85</span>; score &gt;= <span class="number">60</span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>Go只有<code>for</code>一种循环语句：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 传统for循环</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ &#123;</span><br><span class="line">    fmt.Println(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// while风格</span></span><br><span class="line">n := <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n &lt; <span class="number">5</span> &#123;</span><br><span class="line">    fmt.Println(n)</span><br><span class="line">    n++</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 无限循环</span></span><br><span class="line"><span class="comment">// for &#123;</span></span><br><span class="line"><span class="comment">//     fmt.Println(&quot;永远执行&quot;)</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基本函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">add</span><span class="params">(a <span class="type">int</span>, b <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多返回值</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">swap</span><span class="params">(a, b <span class="type">int</span>)</span></span> (<span class="type">int</span>, <span class="type">int</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> b, a</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 命名返回值</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">divide</span><span class="params">(a, b <span class="type">float64</span>)</span></span> (result <span class="type">float64</span>, err <span class="type">error</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span> &#123;</span><br><span class="line">        err = fmt.Errorf(<span class="string">&quot;除数不能为0&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    result = a / b</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">    Name <span class="type">string</span></span><br><span class="line">    Age  <span class="type">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p Person)</span></span> SayHello() &#123;</span><br><span class="line">    fmt.Printf(<span class="string">&quot;你好，我是%s，今年%d岁\n&quot;</span>, p.Name, p.Age)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    p := Person&#123;Name: <span class="string">&quot;小明&quot;</span>, Age: <span class="number">25</span>&#125;</span><br><span class="line">    p.SayHello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="并发编程"><a href="#并发编程" class="headerlink" title="并发编程"></a>并发编程</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">&quot;fmt&quot;</span></span><br><span class="line">    <span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">worker</span><span class="params">(id <span class="type">int</span>, ch <span class="keyword">chan</span> <span class="type">string</span>)</span></span> &#123;</span><br><span class="line">    ch &lt;- fmt.Sprintf(<span class="string">&quot;Worker %d 完成&quot;</span>, id)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">string</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 启动3个goroutine</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt;= <span class="number">3</span>; i++ &#123;</span><br><span class="line">        <span class="keyword">go</span> worker(i, ch)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 接收结果</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt;= <span class="number">3</span>; i++ &#123;</span><br><span class="line">        fmt.Println(&lt;-ch)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">go mod init &lt;module&gt;    <span class="comment"># 初始化模块</span></span><br><span class="line">go get &lt;package&gt;        <span class="comment"># 下载依赖</span></span><br><span class="line">go build                <span class="comment"># 编译项目</span></span><br><span class="line">go run &lt;file&gt;           <span class="comment"># 运行程序</span></span><br><span class="line">go <span class="built_in">test</span>                 <span class="comment"># 运行测试</span></span><br><span class="line">go <span class="built_in">fmt</span>                  <span class="comment"># 格式化代码</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Go语言以其简洁的语法和强大的并发能力，在后端开发、云原生、微服务等领域得到广泛应用。掌握Go的基础语法后，可以进一步学习Web框架（如Gin、Echo）和数据库操作等内容。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://shuqwf.github.io/2026/04/03/Go%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/" data-id="cuidGVVG-USLci8WHVMhLG7p4" data-title="Go语言入门" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/" rel="tag">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" rel="tag">入门教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag">编程语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-文章标题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2026/04/03/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/" class="article-date">
@@ -97,7 +687,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://shuqwf.github.io/2026/04/03/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/" data-id="cuidXf1bn3Rvt10qTX349GMBN" data-title="文章标题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://shuqwf.github.io/2026/04/03/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/" data-id="cuidBglUKnexaOqud2Gz-A2CE" data-title="文章标题" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -148,7 +738,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://shuqwf.github.io/2026/04/03/hello-world/" data-id="cuiddtrD6yiqBYykhqCHI6P87" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://shuqwf.github.io/2026/04/03/hello-world/" data-id="cuidB6NNNGu3ikkxhTJ-5Q8CL" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -167,12 +757,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AF%B9%E6%AF%94/">技术对比</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/">编程教程</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Go/" rel="tag">Go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" rel="tag">入门教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag">编程语言</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%AF%B9%E6%AF%94/" rel="tag">编程语言对比</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Go/" style="font-size: 15px;">Go</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Ruby/" style="font-size: 15px;">Ruby</a> <a href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" style="font-size: 20px;">入门教程</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 20px;">编程语言</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%AF%B9%E6%AF%94/" style="font-size: 10px;">编程语言对比</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -191,11 +802,23 @@
       <ul>
         
           <li>
-            <a href="/2026/04/03/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/">文章标题</a>
+            <a href="/2026/04/03/Go%20vs%20Ruby%20vs%20Python%20%E4%B8%89%E5%A4%A7%E8%AF%AD%E8%A8%80%E5%AF%B9%E6%AF%94/">Go vs Ruby vs Python 三大语言对比</a>
           </li>
         
           <li>
-            <a href="/2026/04/03/hello-world/">Hello World</a>
+            <a href="/2026/04/03/Python%E5%85%A5%E9%97%A8/">Python入门</a>
+          </li>
+        
+          <li>
+            <a href="/2026/04/03/Ruby%E5%85%A5%E9%97%A8/">Ruby入门</a>
+          </li>
+        
+          <li>
+            <a href="/2026/04/03/Go%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">Go语言入门</a>
+          </li>
+        
+          <li>
+            <a href="/2026/04/03/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/">文章标题</a>
           </li>
         
       </ul>
